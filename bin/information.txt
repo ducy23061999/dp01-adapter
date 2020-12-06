@@ -1,0 +1,26 @@
+Yêu cầu:
+1) Viết các hàm đọc các hình tròn, hình đa giác, hình tam giác, hình vuông từ 1 nguồn dữ liệu cho trước (vd file văn bản)
+	- Nếu nguồn dữ liệu là file văn bản, gợi ý về cách lưu trữ các hình này là như sau
+		File circle.txt
+		1.2
+		3.5
+		6.3
+		
+		File polygon.txt -- mỗi dòng lưu 1 đa giác, gồm 2*n số thực biểu diễn toạ độ của n đỉnh
+		1.2 -3.0      1.2 5.9    6  8.2       100 100
+		12 34   56   78   8  12
+		
+		File triangle.txt -- mỗi dòng lưu 3 số biểu diễn độ dài 3 cạnh của tam giác
+		3 4 5
+		30 50 40
+		4 7 4
+		6 6 6
+		
+		File square.txt -- mỗi dòng lưu 1 số biểu diễn độ dài cạnh hình vuông
+		2
+		5
+		2.5
+	
+	- Nếu dữ liệu đến từ nguồn khác (CSDL chẳng hạn) có thể tuỳ ý định nghĩa sao cho bảo đảm lưu đủ các thông số định nghĩa hình
+2) Không được chỉnh sửa nội dung của các class DaGiac, TamGiac, HinhChuNhat, hãy tạo thêm các adapter của các class này để thực hiện việc đếm số hình lọt qua được lỗ tròn bán kính rToFit (double) -- Sử dụng lại hàm 
+static int countFitCircles(List<Circle> lst, double rToFit) 
