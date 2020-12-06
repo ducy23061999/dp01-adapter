@@ -25,8 +25,7 @@ public class HinhVuongDataSource implements IDataSource{
 	@Override
 	public List<Circle> getCircles() {
 		// TODO Auto-generated method stub
-		List<Circle> circles = new ArrayList<Circle>();
-		
+		 List<Circle> circles = new ArrayList<Circle>();
 		 FileReader fileReader = null;
 		 BufferedReader bufferReader = null;
 		 
@@ -63,7 +62,7 @@ public class HinhVuongDataSource implements IDataSource{
 //		 	for(Circle c : circles) {
 //		 		System.out.println(c.getBanKinh());
 //		 	}
-//		
+
 		return circles;
 	}
 

@@ -6,15 +6,17 @@ import husc.dp.useful_classes.HinhVuong;
 public class HinhVuongAdapter extends Circle{
 	private HinhVuong hinhVuong;
 	
-	public HinhVuongAdapter(Double inputNumber) {
+
+	public HinhVuongAdapter(double canh) {
 		// TODO Auto-generated constructor stub
-		super(inputNumber);
-		this.hinhVuong = new HinhVuong(inputNumber);
+		super(canh);
+		this.hinhVuong = new HinhVuong(canh);
 	}
 	
 	@Override
 	public boolean isFit(double r) {
-		// TODO Auto-generated method stub
-		return super.isFit(r);
+		double banKinh = this.hinhVuong.getCanh() / Math.sqrt(2);
+		
+		return banKinh <= r;
 	}
 }

@@ -13,7 +13,15 @@ public class TamGiacAdapter extends Circle{
 	
 	@Override
 	public boolean isFit(double r) {
-		// TODO Auto-generated method stub
-		return super.isFit(r);
+		double a = this.tamGiac.getA();
+		double b = this.tamGiac.getB();
+		double c = this.tamGiac.getC();
+		
+		double nuaChuVi = (a + b + c ) / 2;
+		double dienTichTamGiac = Math.sqrt(nuaChuVi * (nuaChuVi - b) * (nuaChuVi - b) * (nuaChuVi - c));
+		
+		double banKinh = (a * b * c) / (4 * dienTichTamGiac);
+		
+		return banKinh <= r;
 	}
 }

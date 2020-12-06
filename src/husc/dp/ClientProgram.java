@@ -26,23 +26,28 @@ public class ClientProgram {
 		IDataSource listHinhTron = new HinhTronDataSource("dataFile/circle.txt");
 		
 		lst.addAll(listHinhTron.getCircles());
+		
 		// 1.2 Đọc danh sách hình đa giác + tạo adapter của đa giác & bổ sung vào lst
 		
 		IDataSource listDaGiac = new HinhDaGiacDataSource("dataFile/polygon.txt");
 		
 		lst.addAll(listDaGiac.getCircles());
 		
+		
 		// 1.3 Đọc danh sách hình vuông, tạo adapter của hình vuông & bổ sung vào lst
 		
 		IDataSource listVuong = new HinhVuongDataSource("dataFile/square.txt");
 		
 		lst.addAll(listVuong.getCircles());
+		
 		// 1.4 Đọc dnah sách hình tam giác, tạo adapter của hình tam giác & bổ sung vào lst
 		IDataSource listTamGiac = new HinhTamGiacDataSource("dataFile/triangle.txt");
 		
 		lst.addAll(listTamGiac.getCircles());
+		
+		
 		// 2. In số hình tròn vừa với lỗ có bán kính r = 100 ra màn hình
-		double rToFit = 100;
+		double rToFit = 5;
 		int count = countFitCircles(lst, rToFit);
 		System.out.println("So luong: " + count);
 	}
