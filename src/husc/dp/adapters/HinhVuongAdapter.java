@@ -6,10 +6,10 @@ import husc.dp.useful_classes.HinhVuong;
 public class HinhVuongAdapter extends Circle{
 	private HinhVuong hinhVuong;
 	
-	public HinhVuongAdapter(int canh) {
+	public HinhVuongAdapter(Double inputNumber) {
 		// TODO Auto-generated constructor stub
-		super(canh);
-		this.hinhVuong = new HinhVuong(canh);
+		super(inputNumber);
+		this.hinhVuong = new HinhVuong(inputNumber);
 	}
 	
 	@Override
